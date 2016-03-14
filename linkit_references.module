@@ -19,20 +19,10 @@ function linkit_references_ctools_plugin_directory($module, $plugin) {
 function linkit_references_linkit_allowed_field_types() {
   $allowed_field_types = array(
     'node_reference',  
-    'user_reference'
+    'user_reference',
+    'entityreference',
   );
   return $allowed_field_types;
-}
-
-/**
- * Implements hook_linkit_allowed_elements().
- */
-function linkit_references_linkit_allowed_field_elements() {
-  $allowed_elements = array(
-    'node_reference',
-  	'user_reference'
-  );
-  return $allowed_elements;
 }
 
 /**
@@ -41,7 +31,8 @@ function linkit_references_linkit_allowed_field_elements() {
 function linkit_references_linkit_allowed_field_widget_types() {
   $allowed_field_widget_types = array(
     'node_reference_autocomplete',  
-    'user_reference_autocomplete'
+    'user_reference_autocomplete',
+    'entityreference_autocomplete',
   );
   return $allowed_field_widget_types;
 }

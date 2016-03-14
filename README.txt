@@ -1,16 +1,17 @@
 INTRODUCTION
 ============
 
-This module connects Linkit with References (user and node reference), and 
-allow users to search for users or nodes in Linkit instead of the standard
-Drupal autocomplete field when adding references. 
+This module connects Linkit with Entity Reference and References 
+(user and node reference) modules, and allow users to search for users
+or nodes in Linkit instead of the standard Drupal autocomplete field
+when adding references. 
 
 INSTALLATION
 ============
 
  1. Install and configure the dependencies. Check their README files for
     details.
- 2. Install user_reference or node_reference (references module).
+ 2. Install Entity Reference or References module.
  3. Install and enable the linkit_references module.
 
 DEPENDENCIES
@@ -19,18 +20,26 @@ DEPENDENCIES
 Linkit References depends on the module
 
  *  Linkit
- *  User reference or Node reference (References module)
+ *  Entity Reference or References module.
 
 CONFIGURATION
 =============
 
 Create one or more Linkit profiles and configure the insert plugin
-to Node reference or User reference.
+to Entity Reference, Node reference or User reference.
 
 "Insert path as" should be configured to Raw path. 
 
 For more information about Linkit profiles and configuration of
 Linkit profile, see the Linkit documentation. 
+
+LIMITATIONS
+=============
+
+The module does not at the moment not support the Entity Reference
+widget "Autocomplete (Tags style)" due to a weird issue where the
+"Search"-button is not being rendered for field widgets using custom
+multiple values handling (FIELD_BEHAVIOR_CUSTOM).
 
 MAINTAINERS
 ===========
