@@ -1,0 +1,4 @@
+name = Linkit References
+description = Adds Linkit support for the References module (node reference and user reference).
+core = 7.x
+dependencies[] = linkit
